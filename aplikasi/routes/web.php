@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/datasiswa','DatasiswaController@index');
+Route::get('/siswa','SiswaController@index');
