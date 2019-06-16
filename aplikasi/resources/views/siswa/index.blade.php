@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <title></title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
+@extends('layouts.master')
+
+@section('content')
+<div class="container">
+            @if(session('sukses'))
+            <div class="alert alert-success" role="alert">
+             {{session('sukses')}}
+            </div>
+            @endif
     <div class="container">
     <div class="row">
     <div class="col-6">
@@ -27,6 +29,21 @@
         <th>Jam Kembali</th>
         <th>Keterangan</th>
     </tr>
+    @foreach($data_siswa as $siswa)
+    <tr>
+        <td>{{$siswa->nama}}</td>
+        <td>{{$siswa->kelas}}</td>
+        <td>{{$siswa->Jurusan}}</td>
+        <td>{{$siswa->nama_alat}}</td>
+        <td>{{$siswa->jam_pinjam}}</td>
+        <td>{{$siswa->jam_kembali}}</td>
+        <td>{{$siswa->Keterangan}}</td>
+        <td>
+        <a href="/siswa/{{$siswa->id}}/edit" class="btn btn-warning btn-sm">Edit</a>
+        <a href="/siswa/{{$siswa->id}}/delete" class="btn btn-danger btn-sm" onclick="return confirm('Yakin Data Mau Dihapus ?')">Delete</a>
+        </td>
+    </tr>
+    @endforeach
     </table>
 
     </div>
