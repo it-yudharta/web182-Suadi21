@@ -13,19 +13,19 @@
                             {{csrf_field()}}
                             <div class="form-group">
                             <label for="exampleInputEmail1">Nama</label>
-                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nama Anda">
+                            <input name="nama" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan Nama Anda"value="{{$siswa->nama}}">
                             </div>
                             <div class="form-group">
                         <label for="exampleInputEmail1">Kelas</label>
-                        <input name="kelas" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="kelas">
+                        <input name="kelas" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="kelas"value="{{$siswa->kelas}}">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Jurusan</label>
-                        <input name="jurusan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jurusan">
+                        <input name="jurusan" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jurusan"value="{{$siswa->jurusan}}">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Peminjaman Alat</label>
-                        <input name="nama_alat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Alat yang mau dipinjam">
+                        <input name="nama_alat" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Alat yang mau dipinjam"value="{{$siswa->nama_alat}}">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlSelect2">Waktu Pinjam</label>
